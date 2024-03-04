@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concessionária de Motos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8B0000; /* Vermelho fosco */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0 0.5em;
+            border-radius: 3px;
+            background-color: #777;
+        }
+
+        nav a:hover {
+            background-color: #999;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Concessionária de Motos</h1>
+    </header>
+
+    <nav>
+        <a href="#modeloSport">Modelo Sport</a>
+        <a href="#modeloTouring">Modelo Touring</a>
+        <a href="#modeloCruiser">Modelo Cruiser</a>
+        <a href="#FaleConosco">Fale Conosco</a>
+    </nav>
+
+    <section id="modeloSport">
+        <h2>Modelo Sport</h2>
+        <p>Descrição e detalhes do Modelo Sport.</p>
+        <p>
+            As esportivas são motos com design futurista e mecânica de excelente desempenho. 
+            Os motores geralmente possuem mais de 600 cilindradas, o que permite maior aceleração, algumas alcançando 
+            velocidades superiores a 300 Km/h.
+        </p>
+        <div class="image-container">
+            <img src="moto_sport.png" alt="Imagem 1">
+            <img src="moto_sport2.jpg" alt="Imagem 2">
+        </div>
+        <!-- Adicione mais informações ou imagens aqui, se necessário -->
+    </section>
+
+    <section id="modeloTouring" style="display: none;">
+        <h2>Modelo Touring</h2>
+        <p>Descrição e detalhes do Modelo Touring.</p>
+        <p>
+            Entre os tipos de moto, a touring é uma excelente opção para viajar. 
+            Bastante moderna e com amplo espaço para acomodar bagagens, ela 
+            também possui altas cilindradas. Ao manejá-la, o condutor desfruta de 
+            agilidade e conforto sobre um conjunto que suporta perfeitamente altos pesos
+        </p>
+        <div class="image-container">
+            <img src="moto_touring2.jpg" alt="Imagem 1">
+        </div>
+        <!-- Adicione mais informações ou imagens aqui, se necessário -->
+    </section>
+
+    <section id="modeloCruiser" style="display: none;">
+        <h2>Modelo Cruiser</h2>
+        <p>Descrição e detalhes do Modelo Cruiser.</p>
+        <p>
+            São os modelos tradicionais das motos custom sem modificações estruturais. Estas motos foram projetadas para percorrerem 
+            grandes distâncias a velocidades de cruzeiro. Possuem grande distância entre eixos, guidão largo e 
+            tanque de combustível com grande capacidade.
+        </p>
+        <div class="image-container">
+            <img src="moto_cruise.jpg" alt="Imagem 1">
+        </div>
+        <!-- Adicione mais informações ou imagens aqui, se necessário -->
+    </section>
+
+    <section id="#FaleConosco" style="display: none;"> 
+        <h2>Fale Conosco</h2>
+        <p>Mais Informações abaixo.</p>
+        <p>
+            Email para contato: concessionariademotos@gmail.com
+        </p>
+        <div class="image-container">
+            
+        </div>
+        <!-- Adicione mais informações ou imagens aqui, se necessário -->
+    </section>
+d
+
+    <footer>
+        &copy; 2024 Concessionária de Motos. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        // JavaScript para alternar entre as abas
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll("nav a").forEach(function (link) {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+
+                    // Esconde todas as seções
+                    document.querySelectorAll("section").forEach(function (section) {
+                        section.style.display = "none";
+                    });
+
+                    // Mostra a seção correspondente ao link clicado
+                    var targetSectionId = this.getAttribute("href").substring(1);
+                    document.getElementById(targetSectionId).style.display = "block";
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
